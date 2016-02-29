@@ -112,8 +112,8 @@ gulp.task('serve', function() {
   runSequence('server-clean', 'server-build', 'server-watch');
 });
 
-gulp.task('serve-hot', function() {
-  var cmd = new run.Command('NODE_ENV=development node build/server/server.js', {verbosity:3});
+gulp.task('serve-prod', function() {
+  var cmd = new run.Command('NODE_ENV=production node build/server/server.js', {verbosity:3});
   cmd.exec();
 });
 
@@ -136,5 +136,9 @@ gulp.task('full-build', function(){
 });
 
 gulp.task('prod', function() {
-  runSequence('server-build', 'client-prod');
+  runSequence('server-build', 'client-prod', 'serve-prod');
+});
+
+gulp.task('default', function() {
+  runSequence('client-dev', 'serve');
 });

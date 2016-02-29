@@ -12,7 +12,6 @@ class TestText extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <button onClick={() => this.props.handleRequest()}>AJAX AWAY!</button>

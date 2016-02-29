@@ -17,7 +17,7 @@ module.exports = function envConfig(app) {
     }));
   } else {
     logger.log('info', 'Running in development environment');
-    app.set('staticPath', config.endpoints.proxy_static);
+    app.set('staticPath', config.endpoints.static);
     app.use(cors({
       origin: config.endpoints.webpack,
       credentials: true,

@@ -45,7 +45,6 @@ class HomeContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     testToggle: state.home.testToggle,
     testText: state.home.testText,

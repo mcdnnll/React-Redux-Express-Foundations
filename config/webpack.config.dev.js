@@ -16,6 +16,7 @@ module.exports = {
     app: ['babel-polyfill', rootDir + config.dir.s_client + 'index'],
     // styles: [rootDir + config.dir.s_styles + 'ri'],
     devServer: 'webpack-dev-server/client?' + config.endpoints.proxy_webpack,
+    dev: 'webpack/hot/only-dev-server',
   },
 
   output: {

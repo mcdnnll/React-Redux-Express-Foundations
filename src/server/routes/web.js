@@ -29,6 +29,7 @@ exports.index = (req, res, next) => {
         styleBundle = bundleNames.styles.js;
 
         // Return rendered view to the client
+        // staticpath used where bundles are fetched from seperate domain
         res.render('index', {
           title: pageTitle,
           bundle: staticpath + '/' + appBundle,
@@ -45,9 +46,8 @@ exports.index = (req, res, next) => {
 
     res.render('index', {
       title: pageTitle,
-      bundle: staticpath + '/' + appBundle,
-      styles: staticpath + '/' + styleBundle,
-      staticpath: staticpath,
+      bundle: '/static/' + appBundle,
+      styles: '/static/' + styleBundle,
     });
 
   }
