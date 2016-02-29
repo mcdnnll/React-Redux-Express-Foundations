@@ -1,0 +1,23 @@
+{
+  "dir": {
+    "root": "",
+    "client": "build/client/",
+    "dist": "build/dist/",
+    "server": "build/server/",
+    "styles": "build/client/styles/",
+    "scripts": "scripts/",
+    "s_client": "src/client/",
+    "s_styles": "src/client/styles/"
+  },
+  "endpoints": {
+    "web": "http://0.0.0.0:9000",
+    "static": "http://0.0.0.0:9000/static",
+    "proxy_webpack": "http://0.0.0.0:9001",
+    "proxy_static": "http://0.0.0.0:9001/static"
+  },
+  "ports": {
+    "web": 9000,
+    "webpack": 9001
+  },
+  "host": "0.0.0.0"
+}
